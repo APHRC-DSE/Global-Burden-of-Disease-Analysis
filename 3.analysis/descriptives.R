@@ -17,7 +17,7 @@ descr_table <- create_descr_table(
 
 #---------------------------- Mortality rate ---------------------------------------------------------------------
 
-pop_data <- readxl::read_xlsx("./Other Datasets/Deaths_population_Site.xlsx")
+pop_data <- readxl::read_xlsx("./Other_Datasets/Deaths_population_Site.xlsx")
 
 
 yearly_deaths <- pop_data %>%
@@ -154,7 +154,11 @@ disease_colors <- c("Acute respiratory infections" = set2_colors[1],
                     "Malaria/dengue" = set2_colors[6],
                     "Neoplasms" = set2_colors[4],
                     "Neonatal disorders" = set2_colors[8],
-                    "Tuberculosis" = set3_colors[10])
+                    "Tuberculosis" = set3_colors[10],
+                    "Neuropsychiatric conditions" = set3_colors[8],
+                    "Other infectious diseases" = set3_colors[11],
+                    "Digestive diseases" = set3_colors[3],
+                    "Diabetes mellitus" = set3_colors[6])
 
 
 cause_gender_rank <- df2 %>%
@@ -302,6 +306,10 @@ p_sankey <- ggplot(top5_agegroup_country,
     panel.grid = element_blank(),
     legend.position = "bottom"
   )
+
+
+
+
 
 #----------------------------------------------------------------- END ---------------------------------------------------------------
 

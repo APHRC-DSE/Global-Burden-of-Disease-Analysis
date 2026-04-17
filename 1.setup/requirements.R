@@ -18,6 +18,7 @@ output_Dir <- base::file.path(mainDir, subDir_output)
 output_plots_Dir <- base::file.path(mainDir, subDir_output_plots)
 
 
+
 ### create output folders
 base::ifelse(!base::dir.exists(data_Dir), base::dir.create(data_Dir), "Sub Directory exists")
 base::ifelse(!base::dir.exists(output_Dir), base::dir.create(output_Dir), "Sub Directory exists")
